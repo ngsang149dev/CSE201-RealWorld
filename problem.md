@@ -133,9 +133,9 @@ Cheapest price across all months:
 Route costs at best prices: Route 1 → 280M, Route 2 → 280M, Route 3 → 450M
 
 Greedy with W = 1010M:
-- Open Route 1: −280M → 730M left ✓
-- Open Route 2: −280M → 450M left ✓
-- Open Route 3: −450M → 0M left ✓
+- Open Route 1: −280M → 730M left 
+- Open Route 2: −280M → 450M left 
+- Open Route 3: −450M → 0M left 
 
 
 ---
@@ -179,7 +179,7 @@ Cheapest price: **420M** at month 3.
 Route costs: 420M, 420M, 420M → total for all 3 = 1260M > 850M
 
 Greedy with W = 850M:
-- Open Route 1: −420M → 430M left ✓
-- Open Route 2: −420M → 10M left ✓
-- Open Route 3: needs 420M, only 10M left ✗
+- Open Route 1: −420M → 430M left 
+- Open Route 2: −420M → 10M left 
+- Open Route 3: needs 420M, only 10M left 
 
