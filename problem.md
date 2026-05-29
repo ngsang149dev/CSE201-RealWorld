@@ -80,6 +80,11 @@ without exceeding the budget W.
 | Base price of any vehicle | 1 ≤ price ≤ 10^6 (million VND) |
 | Percentage change `P` | −50 ≤ P ≤ 100 |
 
+**Guaranteed by the problem:**
+- All prices stay positive throughout all T months.
+- **All prices after applying percentage changes are exact integers (no decimals).**
+  The input is constructed so that `currentPrice × (100 + P)` is always divisible
+  by 100 at every step. You do not need to handle rounding — integer division is exact.
 
 **Time limit:** 1 second &nbsp;|&nbsp; **Memory limit:** 256 MB
 
@@ -133,10 +138,12 @@ Cheapest price across all months:
 Route costs at best prices: Route 1 → 280M, Route 2 → 280M, Route 3 → 450M
 
 Greedy with W = 1010M:
-- Open Route 1: −280M → 730M left 
-- Open Route 2: −280M → 450M left 
-- Open Route 3: −450M → 0M left 
+- Open Route 1: −280M → 730M left ✓
+- Open Route 2: −280M → 450M left ✓
+- Open Route 3: −450M → 0M left ✓
 
+> ⚠️ **Common mistake:** Using month-1 prices (400M + 400M + 600M = 1400M > 1010M)
+> leads to a wrong answer of 2. The cheapest buying window for both types is NOT month 1.
 
 ---
 
@@ -179,7 +186,10 @@ Cheapest price: **420M** at month 3.
 Route costs: 420M, 420M, 420M → total for all 3 = 1260M > 850M
 
 Greedy with W = 850M:
-- Open Route 1: −420M → 430M left 
-- Open Route 2: −420M → 10M left 
-- Open Route 3: needs 420M, only 10M left 
+- Open Route 1: −420M → 430M left ✓
+- Open Route 2: −420M → 10M left ✓
+- Open Route 3: needs 420M, only 10M left ✗
 
+> ⚠️ **Common mistake:** Assuming +40% then −40% cancels out, leaving the price at 500M.
+> This gives a wrong cheapest price of 500M → only 1 route fits (500M ≤ 850M but
+> 500M + 500M = 1000M > 850M). The correct calculation: 700 × 0.6 = **420M**, not 500M.
