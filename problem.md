@@ -142,7 +142,7 @@ Greedy with W = 1010M:
 - Open Route 2: −280M → 450M left ✓
 - Open Route 3: −450M → 0M left ✓
 
-> ⚠️ **Common mistake:** Using month-1 prices (400M + 400M + 600M = 1400M > 1010M)
+> **Common mistake:** Using month-1 prices (400M + 400M + 600M = 1400M > 1010M)
 > leads to a wrong answer of 2. The cheapest buying window for both types is NOT month 1.
 
 ---
@@ -190,6 +190,6 @@ Greedy with W = 850M:
 - Open Route 2: −420M → 10M left ✓
 - Open Route 3: needs 420M, only 10M left ✗
 
-> ⚠️ **Common mistake:** Assuming +40% then −40% cancels out, leaving the price at 500M.
+> **Common mistake:** Assuming +40% then −40% cancels out, leaving the price at 500M.
 > This gives a wrong cheapest price of 500M → only 1 route fits (500M ≤ 850M but
 > 500M + 500M = 1000M > 850M). The correct calculation: 700 × 0.6 = **420M**, not 500M.
