@@ -21,10 +21,6 @@ The catch: **vehicle prices can change at certain months.** If no change is anno
 the price stays the same as the previous month. When a change does happen, it applies
 to the current price and **stays in effect from that month onward.**
 
-For example: a car costs 100M in months 1 and 2 (no change). In month 3, the price
-goes up 20% → it becomes 120M. From month 3 onward, the price is 120M — not 100M.
-If month 5 then adds another 10%, it becomes 132M (10% of 120M, not of 100M).
-
 **Goal:** Decide *which vehicles to buy* and *in which month* so that Company V can
 open as many routes as possible without going over budget W.
 
